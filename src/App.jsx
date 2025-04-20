@@ -1,15 +1,15 @@
 import { useRoutes } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import './App.css'
-import ReadVillagers from './components/ReadVillagers'
-import EditVillager from './components/EditVillager'
-import CreateVillager from './components/CreateVillager'
-import { supabase } from './client'
+import ReadVillagers from './components/viewAllVillager/page'
+import EditVillager from './components/editvillager/page'
+import CreateVillager from './components/create-villager/page'
+import { useState } from 'react'
 
 function App() {
-  const { data: villagers } = await supabase.from('villagers').select('*');
+  const [villagers, setVillagers] = useState([]);
 
- 
+
   let element = useRoutes([
     {
       path: "/",
