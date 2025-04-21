@@ -1,4 +1,4 @@
-import { useRoutes } from 'react-router-dom'
+import { useRoutes, useLocation } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import './App.css'
 import ReadVillagers from './components/viewAllVillager/page'
@@ -7,7 +7,7 @@ import CreateVillager from './components/create-villager/page'
 import { useState } from 'react'
 
 function App() {
-  const [villagers, setVillagers] = useState([]);
+  const [villagers] = useState([]);
 
 
   let element = useRoutes([
@@ -24,18 +24,26 @@ function App() {
       element: <CreateVillager />
     }
   ]);
-
+  const location = useLocation();
+  const pageTitle = location.pathname.startsWith('/edit')
+    ? 'Update Villager'
+    : '🌳 Villager Squad';
 
   return ( 
 
     <div className="App">
 
       <div className="header">
-        <h1>🌳 Villager Squad</h1>
-        <Link to="/"><button className="headerBtn"> View Villagers 🐾 </button></Link>
-        <Link to="/new"><button className="headerBtn"> Add Villager ➕ </button></Link>
+        <h1>{pageTitle}</h1>
+        
+          <div>
+            <Link to="/"><button className="headerBtn"> All Villagers  </button></Link>
+            <Link to="/new"><button className="headerBtn"> Add Villager  </button></Link>
+        </div>
+        
       </div>
-      {element}
+      <div className='villager-gallery'>{element}</div>
+      
     </div>
   )
 }

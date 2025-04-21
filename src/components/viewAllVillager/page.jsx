@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../animal-card/card';
 import { supabase } from '../../client';
-
+import './view.css'
 const ReadVillagers = () => {
   const [villagers, setVillagers] = useState([]);
 
@@ -22,6 +22,8 @@ const ReadVillagers = () => {
     fetchVillagers();
   }, []);
 
+
+
   return (
     <div className="ReadVillagers">
       {villagers && villagers.length > 0 ? (
@@ -34,6 +36,7 @@ const ReadVillagers = () => {
             personality={villager.personality}
             hobby={villager.hobby}
             favorite_item={villager.favorite_item}
+            
           />
         ))
       ) : (

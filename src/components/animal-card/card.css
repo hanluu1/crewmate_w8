@@ -1,0 +1,55 @@
+/* Card.css */
+
+.Card {
+    background-color: #3b2f2f;  
+    padding: 1.5rem;
+    margin: 1rem;
+    width: 220px;
+    text-align: center;
+    color: white;
+    border: 2px solid #ad8c8c;
+  }
+  
+  .villager-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  
+  .villager-name {
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+  }
+  
+  .Card p {
+    margin: 0.3rem 0;
+    font-size: 1rem;
+  }
+  
+  .editBtn,
+  .deleteButton {
+    margin: 0.5rem 0.3rem;
+    padding: 0.4rem 1rem;
+    border: 2px solid white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .editBtn {
+    background-color: lightgray;
+    color: #333;
+  }
+  
+  .deleteButton {
+    background-color: lightgray;
+    color: #333;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: inherit;
+  }
+  

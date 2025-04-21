@@ -1,0 +1,97 @@
+/* EditVillager.css */
+
+body {
+    background-color: #a4eac9;
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .edit-form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    background-color: #3b2f2f;
+    color: white;
+    gap: 2rem;
+    border: 2px solid #ad8c8c;
+    
+  }
+  .edit-form{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .column-one label,
+  .column-two label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .column-one  input[type="text"],
+  .column-one textarea,
+  .column-one select,
+  .column-two input[type="text"],
+  .column-two textarea,
+  .column-two select {
+    padding: 0.5rem;
+    border: 2px solid #ad8c8c;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+  .column-one{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-right: 1rem;
+  }
+  .column-two{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  .edit-buttons,
+  .deleteButton {
+    margin: 0.5rem 0.3rem;
+    padding: 0.4rem 1rem;
+    border: 2px solid white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .edit-buttons {
+    background-color: lightgray;
+    color: #333;
+    margin-right: 0.5rem;
+  }
+  
+  .deleteButton {
+    background-color: #ff6961;
+    color: black;
+  }
+  
+  @media (max-width: 768px) {
+    .edit-form-container {
+      flex-direction: column; 
+      gap: 1rem; 
+    }
+    .villager-image {
+        display: block; /* Ensure the image behaves like a block element */
+        margin: 0 auto; /* Center the image horizontally */
+        max-width: 100%; /* Ensure the image doesn't overflow */
+        height: auto; /* Maintain the aspect ratio */
+        object-fit: contain; /* Cover the area without distortion */
+      }
+    .edit-form {
+      flex-direction: column; /* Stack the columns vertically */
+      gap: 1rem; /* Add some space between the stacked elements */
+    }
+    .column-one,
+    .column-two {
+      width: 100%; /* Make both columns take full width */
+      margin-right: 0; /* Remove the right margin */
+    }
+
+  }
